@@ -36,17 +36,14 @@ while true; do
     esac
 done
 
-# change system conf and restart X. 
-# user should log back in with xfce 
-function restartX {
-    sudo systemctl isolate graphical.target
-    sudo killall X
-}
+
+# change system conf and ask to restart X11
+sudo systemctl isolate graphical.target
 
 while true; do
     read -p "Do you wish to restart X11 now?" yn
     case $yn in
-        [Yy]* ) restartX; break;;
+        [Yy]* ) sudo killall X; break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
