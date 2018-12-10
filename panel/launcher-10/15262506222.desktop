@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=code
+Comment=
+Exec=code
+Icon=visual-studio-code
+Path=
+Terminal=false
+StartupNotify=false
