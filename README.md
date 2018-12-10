@@ -9,7 +9,7 @@ This might work only if you use centos7 + xfce4 but i haven't met anyone who use
 The shell script will install compulsory packages but the gtk theme should be installed manually. 
 
 
-## recommended gtk theme
+## Recommended gtk theme
 
 [Arc](https://github.com/horst3180/Arc-theme)
 
@@ -30,7 +30,7 @@ I do not onw the right of the image so here is the link.
 
 ## xfce4 additional keybindings
 
-`super + g: ` **Guake** 
+`super + g: ` **guake** 
 
 `super + v: ` **vscode**
 
