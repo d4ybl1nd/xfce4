@@ -29,6 +29,7 @@
         <value type="int" value="6"/>
         <value type="int" value="3"/>
         <value type="int" value="31"/>
+        <value type="int" value="12"/>
         <value type="int" value="17"/>
         <value type="int" value="16"/>
         <value type="int" value="2"/>
@@ -109,8 +110,8 @@
         <value type="string" value="google-chrome-stable"/>
         <value type="string" value="ibus panel"/>
         <value type="string" value="guake"/>
-        <value type="string" value="knotes"/>
         <value type="string" value="ibus-ui-gtk3"/>
+        <value type="string" value="knotes"/>
         <value type="string" value="orage"/>
         <value type="string" value="seapplet"/>
         <value type="string" value="yumex"/>
@@ -251,6 +252,11 @@
         <value type="string" value="-separator"/>
         <value type="string" value="+logout"/>
         <value type="string" value="-logout-dialog"/>
+      </property>
+    </property>
+    <property name="plugin-12" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="15449164023.desktop"/>
       </property>
     </property>
   </property>

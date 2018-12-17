@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Equalizer
+Comment=
+Exec=qpaeq
+Icon=multimedia-audio-player-symbolic
+Path=
+Terminal=false
+StartupNotify=false

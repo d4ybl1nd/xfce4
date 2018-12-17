@@ -7,6 +7,8 @@ This might work only if you use centos7 + xfce4 but i haven't met anyone who use
 
 The shell script will install compulsory packages but the gtk theme should be installed manually. 
 
+to be hoenst, i really haven't tested the script so it might won't work.
+
 
 ## Recommended gtk theme
 
@@ -39,4 +41,3 @@ I do not onw the right of the image so here is the link.
 
 `ctrl + alt + f:` **thunar**
 
-That's it. no craziness. 
