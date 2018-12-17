@@ -27,27 +27,27 @@ install_all() {
     install_guake
 }
 
-# input for yes/no/all
-read_input_ynall() {
-    install_rest() {
-        local ENB_NUX_REPO=$'Would like to enable nux repository? [y/n] '
-        local INST_GUAKE=$'Would like to install Guake? [y/n] '
-        read_input_yn "$ENB_NUX_REPO" enable_nux_repo
-        read_input_yn "$INST_GUAKE" install_guake
-    }
+install_sprt() {
+    local INST_VSCODE=$'Would like to install vscode? [y/n] '
+    local ENB_NUX_REPO=$'Would like to enable nux repository? [y/n] '
+    local INST_GUAKE=$'Would like to install Guake? [y/n] '
+    read_input_yn "$INST_VSCODE" install_vscode
+    read_input_yn "$ENB_NUX_REPO" enable_nux_repo
+    read_input_yn "$INST_GUAKE" install_guake
+}
 
+# input for yes/no/all
+read_input_an() {
     while true; do
-        read -p "$1" yna
-        case $yna in
-            [Yy]* ) $2; break;;
-            [Nn]* ) install_rest; break;;
-            [all]* ) $3 ; break;;
-            * ) echo "Please answer yes or no.";;
+        read -p "$1" an
+        case $an in
+            [all]* ) install_all ; break;;
+            [Nn]* )  install_sprt; break;;
+            * ) echo "Please answer all or no.";;
         esac
     done
 }
 
-# input with yes/no
 read_input_yn() {
     while true; do
         read -p "$1" yn
@@ -59,8 +59,8 @@ read_input_yn() {
     done
 }
 
-INSTVSCODEMSG=$'Would like to install vscode as well?\nEnter [all] to install everything else [y/n] '
-read_input_ynall "$INSTVSCODEMSG" install_vscode install_all
+INSTVSCODEMSG=$'Would like to install addtional software as well (guake, vscode)?\nEnter to install everything else [all/n] '
+read_input_an "$INSTVSCODEMSG"
 
 # install necessary packages
 sudo yum install -y\

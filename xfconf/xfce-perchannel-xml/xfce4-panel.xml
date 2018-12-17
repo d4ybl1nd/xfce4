@@ -110,8 +110,8 @@
         <value type="string" value="google-chrome-stable"/>
         <value type="string" value="ibus panel"/>
         <value type="string" value="guake"/>
-        <value type="string" value="ibus-ui-gtk3"/>
         <value type="string" value="knotes"/>
+        <value type="string" value="ibus-ui-gtk3"/>
         <value type="string" value="orage"/>
         <value type="string" value="seapplet"/>
         <value type="string" value="yumex"/>
