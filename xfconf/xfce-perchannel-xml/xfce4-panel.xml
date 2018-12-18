@@ -53,7 +53,7 @@
       <property name="nrows" type="uint" value="1"/>
     </property>
     <property name="panel-3" type="empty">
-      <property name="position" type="string" value="p=8;x=2880;y=1066"/>
+      <property name="position" type="string" value="p=8;x=2880;y=1067"/>
       <property name="output-name" type="string" value="monitor-1"/>
       <property name="mode" type="uint" value="0"/>
       <property name="autohide-behavior" type="uint" value="0"/>

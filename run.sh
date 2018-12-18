@@ -8,31 +8,24 @@ install_vscode() {
 }
 
 # adding nux repo to yum
-enable_nux_repo() {
+install_guake() {
     # enable nux repo 
     echo "Enabling nux repo for Centos"
     rpm -q --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro 
     sudo yum -q -y install epel-release && rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-}
-
-# guake
-install_guake() {
     sudo yum install -y guake.x86_64
 }
 
 # just install all
 install_all() {
     install_vscode
-    enable_nux_repo
     install_guake
 }
 
 install_sprt() {
     local INST_VSCODE=$'Would like to install vscode? [y/n] '
-    local ENB_NUX_REPO=$'Would like to enable nux repository? [y/n] '
     local INST_GUAKE=$'Would like to install Guake? [y/n] '
     read_input_yn "$INST_VSCODE" install_vscode
-    read_input_yn "$ENB_NUX_REPO" enable_nux_repo
     read_input_yn "$INST_GUAKE" install_guake
 }
 
@@ -96,7 +89,6 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
-
 
 # change system conf and ask to restart X11
 sudo systemctl isolate graphical.target
